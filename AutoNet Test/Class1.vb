@@ -21,6 +21,7 @@ Public Class Class1
         End Get
     End Property
 
+#Region "ACAD"
     'Enable the use of command MBORD to call the subroutine "CreateMTextBorder"
     <CommandMethod("MBORD")>
     Public Sub CreateMTextBorder()
@@ -111,5 +112,16 @@ Public Class Class1
         End If
 
     End Sub
+#End Region
 
+#Region "Plant 3D"
+
+    <CommandMethod("BatchACADExport")>
+    Public Sub BatchACADExport()
+        Dim ExportForm As New frmAcadExport
+        ExportForm.Show()
+    End Sub
+
+
+#End Region
 End Class
